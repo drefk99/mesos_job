@@ -1,0 +1,17 @@
+{
+  "id": "edugl-2",
+  "cmd": "while [ true ] ; do python3 test_naive_bayes.py ; sleep 5 ; done",
+  "cpus": 2.0,
+  "mem": 3000.0,
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "eduglez/mesos-test3",
+      "forcePullImage": true,
+      "network": "BRIDGE",
+      "portMappings": [
+        { "containerPort": 0, "hostPort": 0 }
+      ]
+    }
+  }
+}
